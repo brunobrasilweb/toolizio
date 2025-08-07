@@ -18,7 +18,8 @@ import {
   Lightbulb,
   Instagram,
   Timer,
-  QrCode
+  QrCode,
+  Calculator
 } from "lucide-react";
 
 export const ToolIcons = {
@@ -33,6 +34,7 @@ export const ToolIcons = {
   instagram: Instagram,
   timer: Timer,
   qrcode: QrCode,
+  calculator: Calculator,
   comingSoon: Clock,
   
   // Ícones para botões e alertas

@@ -15,7 +15,8 @@ import {
   QrCode,
   ImageIcon,
   FileText,
-  Code
+  Code,
+  Calculator
 } from "lucide-react";
 
 export default function Home() {
@@ -285,6 +286,24 @@ export default function Home() {
                 Generate QR codes for URLs and links instantly
               </p>
               <div className="mt-4 text-slate-600 dark:text-slate-400 font-medium group-hover:text-slate-700 dark:group-hover:text-slate-300">
+                Use tool →
+              </div>
+            </div>
+          </Link>
+
+          {/* Calculadora de Salário Líquido */}
+          <Link href="/calculadora-salario" className="group">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-200 dark:border-gray-700 hover:border-green-300 dark:hover:border-green-600">
+              <div className="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 dark:group-hover:bg-green-800 transition-colors">
+                <Calculator className="h-6 w-6 text-green-600 dark:text-green-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                Calculadora de Salário
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Calcule seu salário líquido da CLT com descontos do INSS e IRRF
+              </p>
+              <div className="mt-4 text-green-600 dark:text-green-400 font-medium group-hover:text-green-700 dark:group-hover:text-green-300">
                 Use tool →
               </div>
             </div>
