@@ -16,8 +16,76 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Toolizio - Free Online Tools",
-  description: "Collection of useful and free tools for your daily needs",
+  title: {
+    default: "Toolizio - Free Online Tools & Utilities for Developers",
+    template: "%s | Toolizio - Free Online Tools"
+  },
+  description: "Toolizio offers 15+ free online tools and utilities for developers, designers, and professionals. Generate QR codes, passwords, CPF/CNPJ, convert files, decode JWT tokens, and more.",
+  keywords: [
+    "free online tools",
+    "developer tools",
+    "online utilities",
+    "QR code generator",
+    "password generator",
+    "CPF generator",
+    "CNPJ generator",
+    "JWT decoder",
+    "base64 encoder",
+    "hash generator",
+    "file converter",
+    "PDF tools",
+    "markdown to PDF",
+    "HTML to PDF",
+    "favicon generator",
+    "Instagram image downloader",
+    "YouTube thumbnail downloader",
+    "PIX QR code",
+    "pomodoro timer",
+    "productivity tools",
+    "web tools",
+    "programming utilities",
+    "development tools"
+  ],
+  authors: [{ name: "Toolizio Team" }],
+  creator: "Toolizio",
+  publisher: "Toolizio",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://toolizio.com",
+    siteName: "Toolizio",
+    title: "Toolizio - Free Online Tools & Utilities for Developers",
+    description: "Discover 15+ free online tools and utilities for developers, designers, and professionals. Generate QR codes, passwords, convert files, and boost your productivity.",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Toolizio - Free Online Tools",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Toolizio - Free Online Tools & Utilities for Developers",
+    description: "Discover 15+ free online tools and utilities for developers, designers, and professionals. Generate QR codes, passwords, convert files, and boost your productivity.",
+    images: ["/logo.png"],
+    creator: "@toolizio",
+  },
+  alternates: {
+    canonical: "https://toolizio.com",
+  },
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -44,6 +112,44 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Toolizio",
+              "description": "Free online tools and utilities for developers, designers, and professionals",
+              "url": "https://toolizio.com",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://toolizio.com/?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "Toolizio",
+                "url": "https://toolizio.com",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://toolizio.com/logo.png"
+                }
+              },
+              "mainEntity": {
+                "@type": "SoftwareApplication",
+                "name": "Toolizio",
+                "applicationCategory": "WebApplication",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "USD"
+                },
+                "operatingSystem": "Any",
+                "permissions": "https://toolizio.com/privacy-policy"
+              }
+            })
+          }}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
