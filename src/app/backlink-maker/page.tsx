@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { trackGeneration, trackToolUsage } from '@/utils/analytics';
 import Header from '@/components/Header';
@@ -48,15 +48,13 @@ const BACKLINK_SITES: Omit<BacklinkSite, 'status'>[] = [
   { name: 'Scam Analyze', url: 'http://scamanalyze.com/check' },
   { name: 'Info Site Show', url: 'http://www.infositeshow.com/sites' },
   { name: 'View Whois', url: 'http://www.viewwhois.com' },
-  { name: 'HypeStat', url: 'http://' },
-  { name: 'W3 Lookup', url: 'http://' },
+  { name: 'HypeStat', url: 'https://hypestat.com/info' },
   { name: 'WebWiki', url: 'https://www.webwiki.de' },
   { name: 'WebSearch Ranking', url: 'http://ranking.websearch.com/siteinfo.aspx?url=' },
   { name: 'Archive.is', url: 'https://archive.is' },
   { name: 'Who Hosts', url: 'https://who-hosts.com' },
   { name: 'Wayback Machine', url: 'https://web.archive.org/web/*/' },
   { name: 'Website Looker', url: 'http://www.websitelooker.net/www' },
-  { name: 'Whois Bucket', url: 'http://' },
   { name: 'DNS Whois Info', url: 'https://www.dnswhois.info' },
   { name: 'Crawler Ranking', url: 'http://ranking.crawler.com/SiteInfo.aspx?url=' },
   { name: 'Dig.do', url: 'http://dig.do' },
@@ -111,10 +109,31 @@ const BACKLINK_SITES: Omit<BacklinkSite, 'status'>[] = [
   { name: 'TransStats', url: 'https://transtats.bts.gov/exit.asp?url=' },
   { name: 'Weather Exit', url: 'https://water.weather.gov/ahps2/nwsexit.php?url=' },
   { name: 'W3Techs', url: 'https://w3techs.com/sites/info' },
-  { name: 'DuckDuckGo', url: 'https://duckduckgo.com' }
+  { name: 'DuckDuckGo', url: 'https://duckduckgo.com' },
+  { name: 'BoardReader', url: 'http://boardreader.com' },
+  { name: 'Stats Websites', url: 'http://statswebsites.com' },
+  { name: 'Website Shadow', url: 'http://websiteshadow.com' },
+  { name: 'Website Value Calculator', url: 'http://websitevaluecalculator.org' },
+  { name: 'Who Links To Me', url: 'http://wholinkstome.com/url' },
+  { name: 'About Domain', url: 'http://www.aboutdomain.org/backlinks' },
+  { name: 'Alexa Data Details', url: 'http://www.alexa.com/data/details/?url=' },
+  { name: 'Consultanta SEO', url: 'http://www.consultanta-seo.ro/results' },
+  { name: 'PageRank Place', url: 'http://www.pagerankplace.com/website' },
+  { name: 'Surcentro', url: 'http://www.surcentro.com/en/info' },
+  { name: 'Domain Sigma', url: 'https://domainsigma.com/whois' },
+  { name: 'Search.com', url: 'https://search.com/search?q=' },
+  { name: 'StatsCrop HTTPS', url: 'https://statscrop.com/www' },
+  { name: 'Wayback Archive', url: 'http://wayback.archive.org/web/*/' },
+  { name: 'Estibot', url: 'http://www.estibot.com/appraise.php?a=appraise&data=' },
+  { name: 'DNS Lookup FR', url: 'https://dnslookup.fr' },
+  { name: 'Bing CN', url: 'http://cn.bing.com/search?q=' },
+  { name: 'On The Same Host', url: 'http://www.onthesamehost.com/?q=' },
+  { name: 'TraceMyIP Tools', url: 'http://tools.tracemyip.org/lookup' },
+  { name: 'Who.is HTTPS', url: 'https://who.is/whois' },
+  { name: 'MyWOT Scorecard', url: 'https://www.mywot.com/scorecard' }
 ];
 
-export default function BacklinkMaker() {
+function BacklinkMakerContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [url, setUrl] = useState('');
@@ -440,5 +459,38 @@ export default function BacklinkMaker() {
 
       <Footer />
     </div>
+  );
+}
+
+// Loading component for Suspense fallback
+function LoadingFallback() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+      <Header />
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="text-center mb-12">
+          <div className="flex items-center justify-center mb-6">
+            <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
+              <Link2 className="h-8 w-8 text-blue-600 dark:text-blue-400" />
+            </div>
+          </div>
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Backlink Maker
+          </h1>
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Loading...
+          </p>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
+}
+
+export default function BacklinkMaker() {
+  return (
+    <Suspense fallback={<LoadingFallback />}>
+      <BacklinkMakerContent />
+    </Suspense>
   );
 }
