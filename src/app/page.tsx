@@ -13,7 +13,8 @@ import {
   Instagram,
   Timer,
   QrCode,
-  ImageIcon
+  ImageIcon,
+  FileText
 } from "lucide-react";
 
 export default function Home() {
@@ -229,6 +230,24 @@ export default function Home() {
                 Generate high-quality ICO and PNG favicons for web, mobile and desktop
               </p>
               <div className="mt-4 text-violet-600 dark:text-violet-400 font-medium group-hover:text-violet-700 dark:group-hover:text-violet-300">
+                Use tool →
+              </div>
+            </div>
+          </Link>
+
+          {/* Markdown to PDF Converter */}
+          <Link href="/md-to-pdf" className="group">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-200 dark:border-gray-700 hover:border-emerald-300 dark:hover:border-emerald-600">
+              <div className="w-12 h-12 bg-emerald-100 dark:bg-emerald-900 rounded-lg flex items-center justify-center mb-4 group-hover:bg-emerald-200 dark:group-hover:bg-emerald-800 transition-colors">
+                <FileText className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                Markdown to PDF
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Convert Markdown files to PDF format with custom styling
+              </p>
+              <div className="mt-4 text-emerald-600 dark:text-emerald-400 font-medium group-hover:text-emerald-700 dark:group-hover:text-emerald-300">
                 Use tool →
               </div>
             </div>
