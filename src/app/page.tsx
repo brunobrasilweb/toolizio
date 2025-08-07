@@ -14,7 +14,8 @@ import {
   Timer,
   QrCode,
   ImageIcon,
-  FileText
+  FileText,
+  Code
 } from "lucide-react";
 
 export default function Home() {
@@ -248,6 +249,24 @@ export default function Home() {
                 Convert Markdown files to PDF format with custom styling
               </p>
               <div className="mt-4 text-emerald-600 dark:text-emerald-400 font-medium group-hover:text-emerald-700 dark:group-hover:text-emerald-300">
+                Use tool →
+              </div>
+            </div>
+          </Link>
+
+          {/* HTML to PDF Converter */}
+          <Link href="/html-to-pdf" className="group">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600">
+              <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-200 dark:group-hover:bg-blue-800 transition-colors">
+                <Code className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                HTML to PDF
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Convert HTML files to PDF format with preserved styling
+              </p>
+              <div className="mt-4 text-blue-600 dark:text-blue-400 font-medium group-hover:text-blue-700 dark:group-hover:text-blue-300">
                 Use tool →
               </div>
             </div>
