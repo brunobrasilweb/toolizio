@@ -24,8 +24,8 @@ export default function Contact() {
               Email Us
             </p>
             <p className="text-lg text-gray-700 dark:text-gray-300 text-center">
-              <a href="mailto:contact@toolzin.com" className="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">
-                contact@toolzin.com
+              <a href="mailto:contact@toolizio.com" className="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">
+                contact@toolizio.com
               </a>
             </p>
             <p className="mt-6 text-gray-700 dark:text-gray-300 text-center max-w-lg">

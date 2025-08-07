@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Password Generator - Toolzin",
+  title: "Password Generator - Toolizio",
   description: "Generate secure passwords with custom options. Free and secure password generator tool.",
 };
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "JWT Decoder - Toolzin",
+  title: "JWT Decoder - Toolizio",
   description: "Decode and verify JSON Web Tokens (JWT). Free and secure online tool.",
 };
 

@@ -1,4 +1,4 @@
-# Toolzin - Online Tools Collection
+# Toolizio - Online Tools Collection
 
 A collection of useful online tools built with Next.js and TailwindCSS.
 

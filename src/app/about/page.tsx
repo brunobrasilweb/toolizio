@@ -12,17 +12,17 @@ export default function About() {
       {/* Main Content */}
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 border border-gray-200 dark:border-gray-700">
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">About Toolzin</h1>
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">About Toolizio</h1>
           
           <div className="prose dark:prose-invert max-w-none">
             <h2 className="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">Our Mission</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              At Toolzin, our mission is to provide a collection of free, useful, and easy-to-use online tools that help people solve everyday problems. We believe that useful tools should be accessible to everyone without paywalls or complicated interfaces.
+              At Toolizio, our mission is to provide a collection of free, useful, and easy-to-use online tools that help people solve everyday problems. We believe that useful tools should be accessible to everyone without paywalls or complicated interfaces.
             </p>
 
             <h2 className="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">What We Offer</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Toolzin provides a variety of web-based utilities designed to make your digital life easier:
+              Toolizio provides a variety of web-based utilities designed to make your digital life easier:
             </p>
             <ul className="list-disc pl-6 mb-4 text-gray-700 dark:text-gray-300">
               <li className="mb-2">Data generators for testing and development (CPF, CNPJ)</li>
@@ -66,7 +66,7 @@ export default function About() {
 
             <h2 className="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">Our Story</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Toolzin was created by a team of developers who were tired of having to navigate through ad-filled websites just to use simple online tools. We wanted to create a clean, ad-free platform where people could quickly access the utilities they need.
+              Toolizio was created by a team of developers who were tired of having to navigate through ad-filled websites just to use simple online tools. We wanted to create a clean, ad-free platform where people could quickly access the utilities they need.
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               What started as a small project has grown into a collection of tools used by thousands of people daily. We're committed to expanding our offerings while staying true to our core values of privacy, simplicity, and accessibility.

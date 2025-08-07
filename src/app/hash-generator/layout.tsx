@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hash Generator - Toolzin",
+  title: "Hash Generator - Toolizio",
   description: "Generate various types of hash values from text input. Free and secure tool.",
 };
 

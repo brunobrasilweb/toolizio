@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Gerador de QR Code PIX | Toolzin",
+  title: "Gerador de QR Code PIX | Toolizio",
   description: "Gere QR Codes para pagamentos via PIX facilmente e gratuitamente. Uma ferramenta simples para criar códigos PIX estáticos.",
   keywords: ["pix", "qr code", "pagamento", "qr code pix", "gerador pix", "pix copia e cola", "banco central"],
   openGraph: {
-    title: "Gerador de QR Code PIX | Toolzin",
+    title: "Gerador de QR Code PIX | Toolizio",
     description: "Gere QR Codes para pagamentos via PIX facilmente e gratuitamente",
     images: [
       {

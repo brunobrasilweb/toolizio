@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Toolzin - Free Online Tools",
+  title: "Toolizio - Free Online Tools",
   description: "Collection of useful and free tools for your daily needs",
   icons: {
     icon: [

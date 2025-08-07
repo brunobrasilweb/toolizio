@@ -19,12 +19,12 @@ export default function PrivacyPolicy() {
 
             <h2 className="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">Introduction</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              At Toolzin, we respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you.
+              At Toolizio, we respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you.
             </p>
 
             <h2 className="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">Information We Collect</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Toolzin provides online tools that process data directly in your browser. Most of our tools operate entirely on the client-side, which means that the data you input is processed locally on your device and is not sent to our servers.
+              Toolizio provides online tools that process data directly in your browser. Most of our tools operate entirely on the client-side, which means that the data you input is processed locally on your device and is not sent to our servers.
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               However, we do collect some anonymous usage data to help us improve our services:
@@ -65,7 +65,7 @@ export default function PrivacyPolicy() {
               If you have any questions about this Privacy Policy, please contact us at:
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Email: <a href="mailto:contact@toolzin.com" className="text-indigo-600 dark:text-indigo-400 hover:underline">contact@toolzin.com</a>
+              Email: <a href="mailto:contact@toolizio.com" className="text-indigo-600 dark:text-indigo-400 hover:underline">contact@toolizio.com</a>
             </p>
           </div>
         </div>

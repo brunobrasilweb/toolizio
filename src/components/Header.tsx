@@ -17,7 +17,7 @@ export default function Header({ showBackButton = false }: HeaderProps) {
             {/* Logo para tema claro */}
             <Image
               src="/logo.png"
-              alt="Toolzin"
+              alt="Toolizio"
               width={120}
               height={40}
               className="block dark:hidden"
@@ -25,7 +25,7 @@ export default function Header({ showBackButton = false }: HeaderProps) {
             {/* Logo para tema escuro */}
             <Image
               src="/logo-dark.png"
-              alt="Toolzin"
+              alt="Toolizio"
               width={120}
               height={40}
               className="hidden dark:block"

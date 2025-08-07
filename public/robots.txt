@@ -1,9 +1,9 @@
-# Robots.txt file for Toolzin
+# Robots.txt file for Toolizio
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://www.toolzin.com/sitemap.xml
+Sitemap: https://www.toolizio.com/sitemap.xml
 
 # Disallow crawling of private or admin areas if they exist in the future
 # User-agent: *

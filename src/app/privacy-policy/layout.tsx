@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Toolzin",
+  title: "Privacy Policy | Toolizio",
   description: "Our privacy policy explains how we handle your data and protect your privacy.",
 };
 

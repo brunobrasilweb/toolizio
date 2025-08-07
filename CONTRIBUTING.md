@@ -1,4 +1,4 @@
-# Toolzin
+# Toolizio
 
 This is a Next.js project that provides a collection of useful online tools.
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Favicon Generator - Toolzin",
+  title: "Favicon Generator - Toolizio",
   description: "Generate high-quality favicon from JPG or PNG images. Create ICO with multiple resolutions and PNG favicons for web, mobile, and desktop with HTML code included. Free and secure tool.",
 };
 

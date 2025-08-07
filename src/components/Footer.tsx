@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">About Toolzin</h3>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">About Toolizio</h3>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
               A collection of practical and free tools for your daily needs.
             </p>
@@ -45,7 +45,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="text-center text-gray-500 dark:text-gray-400 pt-6 border-t border-gray-200 dark:border-gray-700">
-          <p>&copy; 2025 Toolzin. Free tools for everyone.</p>
+          <p>&copy; 2025 Toolizio. Free tools for everyone.</p>
         </div>
       </div>
     </footer>
