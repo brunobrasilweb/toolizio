@@ -146,6 +146,53 @@ export default function BacklinkMaker() {
     }
   };
 
+  const verifyBacklinkSite = async (site: Omit<BacklinkSite, 'status'>, targetUrl: string): Promise<boolean> => {
+    try {
+      const domain = targetUrl.replace(/^https?:\/\//, '').replace(/\/$/, '');
+      let testUrl = '';
+      
+      // Construir a URL de teste baseada no padrão do site
+      if (site.url.includes('?uri=') || site.url.includes('?q=') || site.url.includes('?url=') || site.url.includes('?domain=')) {
+        testUrl = `${site.url}${domain}`;
+      } else if (site.url.endsWith('/')) {
+        testUrl = `${site.url}${domain}/`;
+      } else {
+        testUrl = `${site.url}/${domain}`;
+      }
+
+      // Fazer requisição com timeout
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 segundos timeout
+
+      const response = await fetch(testUrl, {
+        method: 'HEAD', // Usar HEAD para ser mais eficiente
+        signal: controller.signal,
+        mode: 'no-cors', // Permitir CORS
+      });
+
+      clearTimeout(timeoutId);
+
+      // Se chegou até aqui sem erro, consideramos sucesso
+      return true;
+    } catch (error) {
+      // Em caso de erro (timeout, CORS, etc.), tentamos fazer uma verificação alternativa
+      try {
+        // Tentar fazer uma requisição GET simples para verificar se o site responde
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 5000);
+
+        await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(site.url)}`, {
+          signal: controller.signal,
+        });
+
+        clearTimeout(timeoutId);
+        return true;
+      } catch (proxyError) {
+        return false;
+      }
+    }
+  };
+
   const generateBacklinks = async (inputUrl?: string) => {
     const targetUrl = inputUrl || url;
     
@@ -175,18 +222,31 @@ export default function BacklinkMaker() {
     
     setSites(initialSites);
 
-    // Simular o processo de geração de backlinks
+    // Verificar cada site real fazendo fetch
     for (let i = 0; i < initialSites.length; i++) {
-      await new Promise(resolve => setTimeout(resolve, Math.random() * 1000 + 500));
+      const site = initialSites[i];
       
-      setSites(prev => {
-        const newSites = [...prev];
-        // Simular sucesso em ~70% dos casos
-        newSites[i].status = Math.random() > 0.3 ? 'success' : 'error';
-        return newSites;
-      });
+      try {
+        // Verificar se o site responde e pode ser acessado
+        const isAccessible = await verifyBacklinkSite(site, targetUrl);
+        
+        setSites(prev => {
+          const newSites = [...prev];
+          newSites[i].status = isAccessible ? 'success' : 'error';
+          return newSites;
+        });
+      } catch (error) {
+        setSites(prev => {
+          const newSites = [...prev];
+          newSites[i].status = 'error';
+          return newSites;
+        });
+      }
       
       setCompleted(i + 1);
+      
+      // Pequeno delay para não sobrecarregar os serviços
+      await new Promise(resolve => setTimeout(resolve, 200));
     }
 
     setIsGenerating(false);
@@ -358,8 +418,9 @@ export default function BacklinkMaker() {
               <ol className="list-decimal list-inside space-y-2 text-blue-800 dark:text-blue-200">
                 <li>Enter the URL of the website you want to build backlinks for</li>
                 <li>Click the "Generate Backlinks" button to run the tool</li>
-                <li>The tool will show a list of relevant websites</li>
+                <li>The tool will verify each backlink site by making real requests to check accessibility</li>
                 <li>For successful sites (✓), click "Open" to manually create the backlink</li>
+                <li>Sites marked with (✗) are currently inaccessible or don't respond</li>
               </ol>
             </div>
 
