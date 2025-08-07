@@ -65,7 +65,7 @@ export default function PrivacyPolicy() {
               If you have any questions about this Privacy Policy, please contact us at:
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Email: <a href="mailto:contact@toolzin.site" className="text-indigo-600 dark:text-indigo-400 hover:underline">contact@toolzin.site</a>
+              Email: <a href="mailto:contact@toolzin.com" className="text-indigo-600 dark:text-indigo-400 hover:underline">contact@toolzin.com</a>
             </p>
           </div>
         </div>

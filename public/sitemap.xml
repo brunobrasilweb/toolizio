@@ -1,73 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.commaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.toolzin.site/</loc>
+    <loc>https://www.toolzin.com/</loc>
     <lastmod>2025-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.toolzin.site/cpf-generator</loc>
+    <loc>https://www.toolzin.com/cpf-generator</loc>
     <lastmod>2025-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.toolzin.site/cnpj-generator</loc>
+    <loc>https://www.toolzin.com/cnpj-generator</loc>
     <lastmod>2025-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.toolzin.site/password-generator</loc>
+    <loc>https://www.toolzin.com/password-generator</loc>
     <lastmod>2025-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.toolzin.site/hash-generator</loc>
+    <loc>https://www.toolzin.com/hash-generator</loc>
     <lastmod>2025-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.toolzin.site/jwt-decoder</loc>
+    <loc>https://www.toolzin.com/jwt-decoder</loc>
     <lastmod>2025-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.toolzin.site/base64-tool</loc>
+    <loc>https://www.toolzin.com/base64-tool</loc>
     <lastmod>2025-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.toolzin.site/youtube-thumbnail</loc>
+    <loc>https://www.toolzin.com/youtube-thumbnail</loc>
     <lastmod>2025-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.toolzin.site/instagram-image</loc>
+    <loc>https://www.toolzin.com/instagram-image</loc>
     <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.toolzin.site/pomodoro-timer</loc>
+    <loc>https://www.toolzin.com/pomodoro-timer</loc>
     <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.toolzin.site/pix-qrcode</loc>
+    <loc>https://www.toolzin.com/pix-qrcode</loc>
     <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.toolzin.site/favicon-generator</loc>
+    <loc>https://www.toolzin.com/favicon-generator</loc>
     <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
