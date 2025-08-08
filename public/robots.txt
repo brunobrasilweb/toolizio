@@ -2,6 +2,9 @@
 User-agent: *
 Allow: /
 
+# Disallow dynamic redirects
+Disallow: /wa/
+
 # Sitemap location
 Sitemap: https://www.toolizio.com/sitemap.xml
 
