@@ -162,6 +162,20 @@ const toolCategories = {
         title: "HTML to PDF", 
         description: "Convert HTML to PDF preserving all styling",
         keywords: "html, pdf, converter, css"
+      },
+      {
+        href: "/pdf-to-jpg",
+        icon: FileImage,
+        title: "PDF to JPG Converter",
+        description: "Convert PDF files to high-quality JPG images with batch processing",
+        keywords: "pdf, jpg, converter, image, pdf to jpg, pdf to image"
+      },
+      {
+        href: "/jpg-to-pdf",
+        icon: ImageIcon,
+        title: "JPG to PDF Converter",
+        description: "Convert JPG, JPEG, and PNG images to PDF documents",
+        keywords: "jpg, pdf, converter, image to pdf, jpg to pdf, png to pdf"
       }
     ]
   },
