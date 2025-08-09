@@ -36,7 +36,8 @@ import {
   Zap,
   TrendingUp,
   FileImage,
-  Share2
+  Share2,
+  Hash
 } from "lucide-react";
 
 ;
@@ -83,6 +84,13 @@ const toolCategories = {
         title: "Favicon Generator",
         description: "Generate high-quality favicons for web, mobile and desktop",
         keywords: "favicon, icon, ico, png"
+      },
+      {
+        href: "/uuid-generator",
+        icon: Hash,
+        title: "UUID Generator",
+        description: "Generate unique identifiers (UUID) for applications and databases",
+        keywords: "uuid, guid, unique identifier, v1, v4"
       }
     ]
   },
