@@ -102,6 +102,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+    <meta name="google-adsense-account" content="ca-pub-5155795312555875" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
