@@ -37,7 +37,8 @@ import {
   TrendingUp,
   FileImage,
   Share2,
-  Hash
+  Hash,
+  Globe
 } from "lucide-react";
 
 ;
@@ -120,6 +121,13 @@ const toolCategories = {
         title: "Base64 Encoder",
         description: "Encode text to Base64 or decode Base64 to text",
         keywords: "base64, encode, decode, converter"
+      },
+      {
+        href: "/ip-tool",
+        icon: Globe,
+        title: "IP Address Lookup",
+        description: "Find and copy your public IP address instantly.",
+        keywords: "ip, ip address, lookup, public ip, my ip, copy ip"
       }
     ]
   },
