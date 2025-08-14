@@ -192,6 +192,13 @@ const toolCategories = {
         title: "JPG to PDF Converter",
         description: "Convert JPG, JPEG, and PNG images to PDF documents",
         keywords: "jpg, pdf, converter, image to pdf, jpg to pdf, png to pdf"
+      },
+      {
+        href: "/image-compressor",
+        icon: ImageIcon,
+        title: "Image Compressor",
+        description: "Compress JPG and PNG images to reduce file size while maintaining quality.",
+        keywords: "image, compressor, jpg, png, compress, reduce size, optimize"
       }
     ]
   },
