@@ -166,6 +166,13 @@ const toolCategories = {
         keywords: "xml, json, converter, format"
       },
       {
+        href: "/image-cropper",
+        icon: ImageIcon,
+        title: "Image Cropper",
+        description: "Crop JPG and PNG images directly in your browser. Select area, choose aspect ratio and download the cropped image.",
+        keywords: "image, crop, crop image, jpg, png, aspect ratio"
+      },
+      {
         href: "/json-to-xml",
         icon: FileCode,
         title: "JSON to XML",
