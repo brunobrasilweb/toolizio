@@ -207,6 +207,14 @@ const toolCategories = {
         description: "Compress JPG and PNG images to reduce file size while maintaining quality.",
         keywords: "image, compressor, jpg, png, compress, reduce size, optimize"
       }
+      ,
+      {
+        href: "/image-resizer",
+        icon: ImageIcon,
+        title: "Image Resizer",
+        description: "Resize JPG and PNG images directly in your browser. Change dimensions, keep aspect ratio and download the result.",
+        keywords: "image, resize, resize image, jpg, png, change dimensions"
+      }
     ]
   },
   social: {
