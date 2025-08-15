@@ -109,6 +109,13 @@ const toolCategories = {
         keywords: "hash, md5, sha256, cryptography"
       },
       {
+        href: "/bcrypt-generator",
+        icon: KeyRound,
+        title: "Bcrypt Generator",
+        description: "Generate bcrypt hashes from a text string in your browser. Adjustable salt rounds for testing and development.",
+        keywords: "bcrypt, hash, bcrypt generator, password hashing"
+      },
+      {
         href: "/jwt-decoder", 
         icon: Search,
         title: "JWT Decoder",
