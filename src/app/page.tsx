@@ -34,6 +34,7 @@ import {
   Shield,
   Smartphone,
   Zap,
+  BarChart2,
   TrendingUp,
   FileImage,
   Share2,
@@ -279,6 +280,13 @@ const toolCategories = {
         title: "Calculadora de Salário",
         description: "Calcule seu salário líquido CLT com descontos de INSS e IRRF",
         keywords: "salario, calculadora, clt, inss, irrf"
+      },
+      {
+        href: "/ads-earnings-simulator",
+        icon: BarChart2,
+        title: "Ads Earnings Simulator",
+        description: "Estimate and compare monthly ad revenue from AdSense and competitors using RPM, CTR and CPC.",
+        keywords: "adsense, ad revenue, rpm, cpc, ctr, simulator"
       },
       {
         href: "/backlink-maker",
