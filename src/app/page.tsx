@@ -81,6 +81,13 @@ const toolCategories = {
         keywords: "qr code, qrcode, qr generator"
       },
       {
+        href: "/barcode-generator",
+        icon: FileText,
+        title: "Barcode Generator",
+        description: "Generate barcodes (EAN13, CODE128, UPC) and download as SVG or PNG",
+        keywords: "barcode, ean13, upc, code128, barcode generator"
+      },
+      {
         href: "/favicon-generator",
         icon: ImageIcon,
         title: "Favicon Generator",
