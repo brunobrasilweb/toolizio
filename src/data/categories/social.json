@@ -1,0 +1,29 @@
+{
+  "title": "Social Media",
+  "description": "Social media tools",
+  "icon": "Share2",
+  "color": "purple",
+  "tools": [
+    {
+      "href": "/youtube-thumbnail",
+      "icon": "Youtube",
+      "title": "YouTube Thumbnail Downloader",
+      "description": "Download YouTube video thumbnails in high quality",
+      "keywords": "youtube, thumbnail, download, image"
+    },
+    {
+      "href": "/instagram-image",
+      "icon": "Instagram",
+      "title": "Instagram Image Downloader",
+      "description": "Download images from Instagram posts easily",
+      "keywords": "instagram, image, download, photo"
+    },
+    {
+      "href": "/whatsapp-link",
+      "icon": "MessageSquare",
+      "title": "WhatsApp Link Generator",
+      "description": "Create direct chat links for WhatsApp with pre-filled messages",
+      "keywords": "whatsapp, link, chat, message"
+    }
+  ]
+}

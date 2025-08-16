@@ -1,0 +1,15 @@
+{
+  "title": "Financial",
+  "description": "Financial and payment tools",
+  "icon": "QrCode",
+  "color": "cyan",
+  "tools": [
+    {
+      "href": "/pix-qrcode",
+      "icon": "QrCode",
+      "title": "QR Code PIX",
+      "description": "Gere QR Codes para pagamentos via PIX de forma rápida e segura",
+      "keywords": "pix, qr code, pagamento, transferencia"
+    }
+  ]
+}

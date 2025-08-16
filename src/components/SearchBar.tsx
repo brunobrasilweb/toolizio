@@ -42,7 +42,7 @@ export default function SearchBar({ onSearch, placeholder = "Search tools..." }:
   };
 
   return (
-    <div className="relative max-w-md mx-auto mb-8">
+    <div className="relative w-full mb-8">
       <div className="relative">
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
         <input

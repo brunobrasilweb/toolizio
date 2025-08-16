@@ -7,11 +7,14 @@ interface Tool {
   title: string;
   description: string;
   keywords: string;
+  icon?: string;
 }
 
 interface Category {
   title: string;
   description: string;
+  icon?: string;
+  color?: string;
   tools: Tool[];
 }
 

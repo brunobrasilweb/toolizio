@@ -1,0 +1,85 @@
+{
+  "title": "Converters",
+  "description": "Convert between different formats",
+  "icon": "RefreshCw",
+  "color": "green",
+  "tools": [
+    {
+      "href": "/json-to-csv",
+      "icon": "Table",
+      "title": "JSON to CSV",
+      "description": "Convert JSON data to CSV format with download option",
+      "keywords": "json, csv, converter, download"
+    },
+    {
+      "href": "/csv-to-json",
+      "icon": "Upload",
+      "title": "CSV to JSON",
+      "description": "Convert CSV files to JSON with upload and download",
+      "keywords": "csv, json, converter, upload"
+    },
+    {
+      "href": "/xml-to-json",
+      "icon": "FileJson",
+      "title": "XML to JSON",
+      "description": "Convert XML to JSON with clean and formatted preview",
+      "keywords": "xml, json, converter, format"
+    },
+    {
+      "href": "/image-cropper",
+      "icon": "ImageIcon",
+      "title": "Image Cropper",
+      "description": "Crop JPG and PNG images directly in your browser. Select area, choose aspect ratio and download the cropped image.",
+      "keywords": "image, crop, crop image, jpg, png, aspect ratio"
+    },
+    {
+      "href": "/json-to-xml",
+      "icon": "FileCode",
+      "title": "JSON to XML",
+      "description": "Convert JSON to XML with clean and structured formatting",
+      "keywords": "json, xml, converter, format"
+    },
+    {
+      "href": "/md-to-pdf",
+      "icon": "FileText",
+      "title": "Markdown to PDF",
+      "description": "Convert Markdown files to PDF with custom styling",
+      "keywords": "markdown, pdf, converter, md"
+    },
+    {
+      "href": "/html-to-pdf",
+      "icon": "Code",
+      "title": "HTML to PDF",
+      "description": "Convert HTML to PDF preserving all styling",
+      "keywords": "html, pdf, converter, css"
+    },
+    {
+      "href": "/pdf-to-jpg",
+      "icon": "FileImage",
+      "title": "PDF to JPG Converter",
+      "description": "Convert PDF files to high-quality JPG images with batch processing",
+      "keywords": "pdf, jpg, converter, image, pdf to jpg, pdf to image"
+    },
+    {
+      "href": "/jpg-to-pdf",
+      "icon": "ImageIcon",
+      "title": "JPG to PDF Converter",
+      "description": "Convert JPG, JPEG, and PNG images to PDF documents",
+      "keywords": "jpg, pdf, converter, image to pdf, jpg to pdf, png to pdf"
+    },
+    {
+      "href": "/image-compressor",
+      "icon": "ImageIcon",
+      "title": "Image Compressor",
+      "description": "Compress JPG and PNG images to reduce file size while maintaining quality.",
+      "keywords": "image, compressor, jpg, png, compress, reduce size, optimize"
+    },
+    {
+      "href": "/image-resizer",
+      "icon": "ImageIcon",
+      "title": "Image Resizer",
+      "description": "Resize JPG and PNG images directly in your browser. Change dimensions, keep aspect ratio and download the result.",
+      "keywords": "image, resize, resize image, jpg, png, change dimensions"
+    }
+  ]
+}

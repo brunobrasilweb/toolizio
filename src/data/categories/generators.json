@@ -1,0 +1,57 @@
+{
+  "title": "Generators",
+  "description": "Tools to generate data and codes",
+  "icon": "Zap",
+  "color": "blue",
+  "tools": [
+    {
+      "href": "/cpf-generator",
+      "icon": "FileSpreadsheet",
+      "title": "CPF Generator",
+      "description": "Generate valid CPFs for testing and development quickly and securely",
+      "keywords": "cpf, cpf generator, validate cpf"
+    },
+    {
+      "href": "/cnpj-generator",
+      "icon": "Building2",
+      "title": "CNPJ Generator",
+      "description": "Generate valid CNPJs for business testing and development",
+      "keywords": "cnpj, cnpj generator, validate cnpj"
+    },
+    {
+      "href": "/password-generator",
+      "icon": "KeyRound",
+      "title": "Password Generator",
+      "description": "Create secure and customizable passwords with different criteria",
+      "keywords": "password, generator, security, strong password"
+    },
+    {
+      "href": "/qr-code-generator",
+      "icon": "QrCode",
+      "title": "QR Code Generator",
+      "description": "Create QR codes for URLs, texts and links instantly",
+      "keywords": "qr code, qrcode, qr generator"
+    },
+    {
+      "href": "/barcode-generator",
+      "icon": "FileText",
+      "title": "Barcode Generator",
+      "description": "Generate barcodes (EAN13, CODE128, UPC) and download as SVG or PNG",
+      "keywords": "barcode, ean13, upc, code128, barcode generator"
+    },
+    {
+      "href": "/favicon-generator",
+      "icon": "ImageIcon",
+      "title": "Favicon Generator",
+      "description": "Generate high-quality favicons for web, mobile and desktop",
+      "keywords": "favicon, icon, ico, png"
+    },
+    {
+      "href": "/uuid-generator",
+      "icon": "Hash",
+      "title": "UUID Generator",
+      "description": "Generate unique identifiers (UUID) for applications and databases",
+      "keywords": "uuid, guid, unique identifier, v1, v4"
+    }
+  ]
+}
