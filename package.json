@@ -6,9 +6,11 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "playwright install --with-deps chromium"
   },
   "dependencies": {
+  "playwright": "^1.40.0",
   "bcryptjs": "^2.4.3",
     "@pdf-lib/upng": "^1.0.1",
     "@types/markdown-it": "^14.1.2",
@@ -35,4 +37,5 @@
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
   }
+  
 }

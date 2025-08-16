@@ -19,6 +19,13 @@
       "keywords": "instagram, image, download, photo"
     },
     {
+      "href": "/instagram-video",
+      "icon": "Instagram",
+      "title": "Instagram Video Downloader",
+      "description": "Download videos from Instagram posts and reels quickly",
+      "keywords": "instagram, video, download, reel"
+    },
+    {
       "href": "/whatsapp-link",
       "icon": "MessageSquare",
       "title": "WhatsApp Link Generator",
