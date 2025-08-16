@@ -267,6 +267,13 @@ const toolCategories = {
         keywords: "pomodoro, timer, productivity, focus"
       },
       {
+        href: "/sorteio",
+        icon: Timer,
+        title: "Sorteio Online",
+        description: "Cole uma lista de nomes e sorteie um vencedor com animação atraente",
+        keywords: "sorteio, raffle, random, winner, sortear nomes"
+      },
+      {
         href: "/calculadora-salario",
         icon: Calculator, 
         title: "Calculadora de Salário",
