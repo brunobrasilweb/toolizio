@@ -81,5 +81,13 @@
       "description": "Resize JPG and PNG images directly in your browser. Change dimensions, keep aspect ratio and download the result.",
       "keywords": "image, resize, resize image, jpg, png, change dimensions"
     }
+    ,
+    {
+      "href": "/background-removal",
+      "icon": "ImageIcon",
+      "title": "Background Removal",
+      "description": "Remove backgrounds from images in your browser. Export transparent PNG or replace background with a color.",
+      "keywords": "background removal, remove background, image background, png, transparent background"
+    }
   ]
 }
