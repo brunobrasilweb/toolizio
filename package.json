@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "if [ \"$NETLIFY\" != \"true\" ]; then playwright install chromium; fi"
+    "postinstall": "playwright install chromium"
   },
   "dependencies": {
   "playwright": "^1.40.0",
