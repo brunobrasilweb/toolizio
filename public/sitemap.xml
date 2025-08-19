@@ -210,6 +210,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://www.toolizio.com/fuel-consumption</loc>
+    <lastmod>2025-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Category pages -->
   <url>
     <loc>https://www.toolizio.com/category/generators</loc>
