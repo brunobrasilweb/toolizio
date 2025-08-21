@@ -32,5 +32,13 @@
       "description": "Create direct chat links for WhatsApp with pre-filled messages",
       "keywords": "whatsapp, link, chat, message"
     }
+    ,
+    {
+      "href": "/contact-extractor",
+      "icon": "AtSign",
+      "title": "Contact Extractor",
+      "description": "Extract emails and phone numbers from a website by crawling up to 50 internal links.",
+      "keywords": "email extractor, phone extractor, crawl, contact"
+    }
   ]
 }
