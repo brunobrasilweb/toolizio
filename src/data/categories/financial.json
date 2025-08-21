@@ -19,5 +19,13 @@
       "description": "Calculate fuel consumption and costs (daily, biweekly, monthly, semiannual, annual) based on your daily mileage.",
       "keywords": "fuel, consumption, liters, cost, gas, calculator, fuel calculator"
     }
+    ,
+    {
+      "href": "/compound-interest",
+      "icon": "Calculator",
+      "title": "Compound Interest Calculator",
+      "description": "Calculate future value with compound interest. Supports periodic contributions, configurable compounding and detailed breakdowns.",
+      "keywords": "compound interest, investment, future value, interest calculator, financial calculator"
+    }
   ]
 }

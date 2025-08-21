@@ -39,5 +39,13 @@
       "description": "Generate quality backlinks to improve your website's SEO",
       "keywords": "backlink, seo, link building, optimization"
     }
+    ,
+    {
+      "href": "/word-counter",
+      "icon": "Calculator",
+      "title": "Word Counter",
+      "description": "Count words, characters, sentences, lines and estimate reading time quickly and privately.",
+      "keywords": "word counter, character counter, count words, reading time"
+    }
   ]
 }

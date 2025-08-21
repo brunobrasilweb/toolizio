@@ -169,6 +169,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.toolizio.com/word-counter</loc>
+    <lastmod>2025-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.toolizio.com/image-resizer</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -213,6 +219,12 @@
   <url>
     <loc>https://www.toolizio.com/fuel-consumption</loc>
     <lastmod>2025-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.toolizio.com/compound-interest</loc>
+    <lastmod>2025-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
