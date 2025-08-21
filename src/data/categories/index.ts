@@ -4,6 +4,7 @@ import converters from './converters.json';
 import social from './social.json';
 import productivity from './productivity.json';
 import financial from './financial.json';
+import calculations from './calculations.json';
 
 const categories: Record<string, any> = {
   generators,
@@ -12,6 +13,7 @@ const categories: Record<string, any> = {
   social,
   productivity,
   financial,
+  calculations,
 };
 
 export default categories;

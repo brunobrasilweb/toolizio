@@ -1,0 +1,50 @@
+{
+  "title": "Calculations",
+  "description": "Calculation tools: calories, age, compound interest, fuel consumption and simulators.",
+  "icon": "Calculator",
+  "color": "blue",
+  "tools": [
+    {
+      "href": "/age-calculator",
+      "icon": "Calendar",
+      "title": "Age Calculator",
+      "description": "Calculate age from birthdate and compare between dates. Provides detailed breakdown in years, months and days.",
+      "keywords": "age, calculator, calculate age, birthdate, age calculator"
+    },
+    {
+      "href": "/calorie-calculator",
+      "icon": "Flame",
+      "title": "Calorie Calculator",
+      "description": "Estimate daily calorie needs (BMR) and maintenance calories using Mifflin-St Jeor and activity multipliers.",
+      "keywords": "calorie calculator, bmr, mifflin st jeor, daily calories, maintenance calories"
+    },
+    {
+      "href": "/fuel-consumption",
+      "icon": "Truck",
+      "title": "Fuel Consumption Calculator",
+      "description": "Calculate fuel consumption and costs (daily, biweekly, monthly, semiannual, annual) based on your daily mileage.",
+      "keywords": "fuel, consumption, liters, cost, gas, calculator, fuel calculator"
+    },
+    {
+      "href": "/compound-interest",
+      "icon": "Calculator",
+      "title": "Compound Interest Calculator",
+      "description": "Calculate future value with compound interest. Supports periodic contributions, configurable compounding and detailed breakdowns.",
+      "keywords": "compound interest, investment, future value, interest calculator, financial calculator"
+    },
+    {
+      "href": "/calculadora-salario",
+      "icon": "Calculator",
+      "title": "Calculadora de Salário",
+      "description": "Calcule seu salário líquido CLT com descontos de INSS e IRRF",
+      "keywords": "salario, calculadora, clt, inss, irrf"
+    },
+    {
+      "href": "/ads-earnings-simulator",
+      "icon": "BarChart2",
+      "title": "Ads Earnings Simulator",
+      "description": "Estimate and compare monthly ad revenue from AdSense and competitors using RPM, CTR and CPC.",
+      "keywords": "adsense, ad revenue, rpm, cpc, ctr, simulator"
+    }
+  ]
+}
