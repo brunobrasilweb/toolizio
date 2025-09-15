@@ -53,5 +53,13 @@
       "description": "Generate unique identifiers (UUID) for applications and databases",
       "keywords": "uuid, guid, unique identifier, v1, v4"
     }
+    ,
+    {
+      "href": "/credit-card-generator",
+      "icon": "Hash",
+      "title": "Credit Card Generator",
+      "description": "Generate valid credit card numbers for testing using common issuer prefixes and the Luhn algorithm.",
+      "keywords": "credit card generator, luhn, card number, testing, visa, mastercard, amex"
+    }
   ]
 }
