@@ -2,13 +2,5 @@
 User-agent: *
 Allow: /
 
-# Disallow dynamic redirects
-Disallow: /wa/
-
 # Sitemap location
 Sitemap: https://www.toolizio.com/sitemap.xml
-
-# Disallow crawling of private or admin areas if they exist in the future
-# User-agent: *
-# Disallow: /admin/
-# Disallow: /private/
