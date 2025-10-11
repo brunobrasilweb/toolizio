@@ -54,6 +54,13 @@
       "keywords": "html, pdf, converter, css"
     },
     {
+      "href": "/html-to-image",
+      "icon": "ImageIcon",
+      "title": "HTML to Image",
+      "description": "Convert HTML or a URL to PNG or JPG images directly in your browser",
+      "keywords": "html, image, png, jpg, screenshot, convert"
+    },
+    {
       "href": "/pdf-to-jpg",
       "icon": "FileImage",
       "title": "PDF to JPG Converter",
