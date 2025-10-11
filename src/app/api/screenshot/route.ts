@@ -34,11 +34,15 @@ export async function GET(req: Request) {
       options.type = 'png'
     }
 
-    const buffer = await page.screenshot(options)
-    await browser.close()
+  const buffer = await page.screenshot(options)
+  await browser.close()
 
-    const contentType = options.type === 'jpeg' ? 'image/jpeg' : 'image/png'
-    return new Response(buffer, { headers: { 'Content-Type': contentType } })
+  // Convert Node Buffer / Uint8Array to a standalone ArrayBuffer slice so TypeScript sees a valid BodyInit
+  const uint8 = buffer instanceof Uint8Array ? buffer : new Uint8Array(buffer as any)
+  const arrayBuffer = uint8.buffer.slice(uint8.byteOffset, uint8.byteOffset + uint8.byteLength)
+
+  const contentType = options.type === 'jpeg' ? 'image/jpeg' : 'image/png'
+  return new Response(arrayBuffer, { headers: { 'Content-Type': contentType } })
   } catch (err: any) {
     console.error('Screenshot error:', err)
     return NextResponse.json({ error: 'Failed to capture' }, { status: 500 })
