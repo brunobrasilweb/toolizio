@@ -39,6 +39,11 @@ export const metadata: Metadata = {
   authors: [{ name: "Toolizio Team" }],
   creator: "Toolizio",
   publisher: "Toolizio",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
     type: "website",
     locale: "en_US",

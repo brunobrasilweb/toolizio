@@ -1,6 +1,10 @@
 # Robots.txt file for Toolizio
+# Allow all bots to crawl the website
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://www.toolizio.com/sitemap.xml
+# Crawl-delay settings (in seconds)
+Crawl-delay: 1
+
+# Sitemap location (must match canonical domain)
+Sitemap: https://toolizio.com/sitemap.xml

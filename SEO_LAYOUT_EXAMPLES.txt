@@ -1,0 +1,525 @@
+// Exemplos de implementação SEO para ferramentas específicas
+// Copie e adapte conforme necessário para cada ferramenta
+
+// ============================================================================
+// EXEMPLO 1: Password Generator
+// ============================================================================
+
+// File: src/app/password-generator/layout.tsx
+
+import type { Metadata } from "next";
+import { generateToolStructuredData, generateBreadcrumbStructuredData } from "@/utils/seo";
+
+export const metadata: Metadata = {
+  title: "Password Generator - Create Strong Secure Passwords Online",
+  description: "Free online password generator to create strong, secure passwords with customizable options. Instant generation, no registration required.",
+  keywords: [
+    "password generator",
+    "strong password",
+    "secure password",
+    "random password",
+    "password maker",
+    "free tool"
+  ],
+  openGraph: {
+    title: "Password Generator - Create Strong Secure Passwords | Toolizio",
+    description: "Free password generator with customizable options for maximum security",
+    type: "website",
+    url: "https://toolizio.com/password-generator",
+    images: [
+      {
+        url: "/og-password-generator.png",
+        width: 1200,
+        height: 630,
+        alt: "Password Generator - Toolizio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Password Generator - Create Strong Secure Passwords",
+    description: "Free online tool to generate strong passwords instantly",
+    images: ["/twitter-password-generator.png"],
+  },
+  alternates: {
+    canonical: "https://toolizio.com/password-generator",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    'max-image-preview': 'large',
+    'max-snippet': -1,
+  },
+};
+
+export default function PasswordGeneratorLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateToolStructuredData({
+            name: 'Password Generator',
+            description: 'Free tool to generate strong, secure passwords with customizable options for maximum account security',
+            url: 'https://toolizio.com/password-generator',
+            category: 'UtilityApplication',
+            image: 'https://toolizio.com/og-password-generator.png',
+            ratingValue: 4.9,
+            ratingCount: 320,
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateBreadcrumbStructuredData({
+            toolName: 'Password Generator',
+            toolSlug: '/password-generator',
+            categoryName: 'Generators',
+            categorySlug: 'generators',
+          }),
+        }}
+      />
+      {children}
+    </>
+  );
+}
+
+// ============================================================================
+// EXEMPLO 2: QR Code Generator
+// ============================================================================
+
+// File: src/app/qr-code-generator/layout.tsx
+
+import type { Metadata } from "next";
+import { generateToolStructuredData, generateBreadcrumbStructuredData } from "@/utils/seo";
+
+export const metadata: Metadata = {
+  title: "QR Code Generator - Create QR Codes Online Free",
+  description: "Generate QR codes instantly for URLs, text, and links. Free QR code generator with download options.",
+  keywords: [
+    "qr code generator",
+    "qr code",
+    "create qr code",
+    "free qr code",
+    "qr code maker",
+    "generate qr"
+  ],
+  openGraph: {
+    title: "QR Code Generator - Create QR Codes Online | Toolizio",
+    description: "Free QR code generator for URLs, text, and links. Instant creation and download.",
+    type: "website",
+    url: "https://toolizio.com/qr-code-generator",
+    images: [
+      {
+        url: "/og-qr-code-generator.png",
+        width: 1200,
+        height: 630,
+        alt: "QR Code Generator - Toolizio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "QR Code Generator - Create QR Codes Free",
+    description: "Generate QR codes instantly for any URL or text",
+    images: ["/twitter-qr-code-generator.png"],
+  },
+  alternates: {
+    canonical: "https://toolizio.com/qr-code-generator",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    'max-image-preview': 'large',
+    'max-snippet': -1,
+  },
+};
+
+export default function QRCodeGeneratorLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateToolStructuredData({
+            name: 'QR Code Generator',
+            description: 'Free QR code generator to create QR codes for URLs, text, and links instantly',
+            url: 'https://toolizio.com/qr-code-generator',
+            category: 'UtilityApplication',
+            image: 'https://toolizio.com/og-qr-code-generator.png',
+            ratingValue: 4.8,
+            ratingCount: 450,
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateBreadcrumbStructuredData({
+            toolName: 'QR Code Generator',
+            toolSlug: '/qr-code-generator',
+            categoryName: 'Generators',
+            categorySlug: 'generators',
+          }),
+        }}
+      />
+      {children}
+    </>
+  );
+}
+
+// ============================================================================
+// EXEMPLO 3: Base64 Tool (Converter)
+// ============================================================================
+
+// File: src/app/base64-tool/layout.tsx
+
+import type { Metadata } from "next";
+import { generateToolStructuredData, generateBreadcrumbStructuredData } from "@/utils/seo";
+
+export const metadata: Metadata = {
+  title: "Base64 Encoder Decoder - Convert Text to Base64 Online",
+  description: "Free Base64 encoder and decoder tool. Convert text to Base64 and decode Base64 strings instantly.",
+  keywords: [
+    "base64",
+    "base64 encoder",
+    "base64 decoder",
+    "base64 converter",
+    "encode decode",
+    "online converter"
+  ],
+  openGraph: {
+    title: "Base64 Converter - Encode & Decode Online | Toolizio",
+    description: "Free Base64 encoder and decoder for converting text instantly",
+    type: "website",
+    url: "https://toolizio.com/base64-tool",
+    images: [
+      {
+        url: "/og-base64-tool.png",
+        width: 1200,
+        height: 630,
+        alt: "Base64 Converter - Toolizio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Base64 Converter - Encode & Decode Free",
+    description: "Convert text to Base64 and decode Base64 strings online",
+    images: ["/twitter-base64-tool.png"],
+  },
+  alternates: {
+    canonical: "https://toolizio.com/base64-tool",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    'max-image-preview': 'large',
+    'max-snippet': -1,
+  },
+};
+
+export default function Base64ToolLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateToolStructuredData({
+            name: 'Base64 Tool',
+            description: 'Free Base64 encoder and decoder to convert text to Base64 and decode Base64 strings instantly',
+            url: 'https://toolizio.com/base64-tool',
+            category: 'UtilityApplication',
+            image: 'https://toolizio.com/og-base64-tool.png',
+            ratingValue: 4.7,
+            ratingCount: 280,
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateBreadcrumbStructuredData({
+            toolName: 'Base64 Tool',
+            toolSlug: '/base64-tool',
+            categoryName: 'Converters',
+            categorySlug: 'converters',
+          }),
+        }}
+      />
+      {children}
+    </>
+  );
+}
+
+// ============================================================================
+// EXEMPLO 4: Hash Generator (Security)
+// ============================================================================
+
+// File: src/app/hash-generator/layout.tsx
+
+import type { Metadata } from "next";
+import { generateToolStructuredData, generateBreadcrumbStructuredData } from "@/utils/seo";
+
+export const metadata: Metadata = {
+  title: "Hash Generator - MD5, SHA256, SHA512 Cryptographic Hashes",
+  description: "Generate MD5, SHA1, SHA256, SHA512 hashes instantly. Free cryptographic hash generator for developers.",
+  keywords: [
+    "hash generator",
+    "md5",
+    "sha256",
+    "sha512",
+    "cryptographic hash",
+    "online tool",
+    "development"
+  ],
+  openGraph: {
+    title: "Hash Generator - MD5, SHA256 Online | Toolizio",
+    description: "Free cryptographic hash generator for MD5, SHA1, SHA256, SHA512",
+    type: "website",
+    url: "https://toolizio.com/hash-generator",
+    images: [
+      {
+        url: "/og-hash-generator.png",
+        width: 1200,
+        height: 630,
+        alt: "Hash Generator - Toolizio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hash Generator - MD5, SHA256, SHA512 Free",
+    description: "Generate cryptographic hashes instantly",
+    images: ["/twitter-hash-generator.png"],
+  },
+  alternates: {
+    canonical: "https://toolizio.com/hash-generator",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    'max-image-preview': 'large',
+    'max-snippet': -1,
+  },
+};
+
+export default function HashGeneratorLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateToolStructuredData({
+            name: 'Hash Generator',
+            description: 'Free cryptographic hash generator for MD5, SHA1, SHA256, and SHA512 hashes',
+            url: 'https://toolizio.com/hash-generator',
+            category: 'UtilityApplication',
+            image: 'https://toolizio.com/og-hash-generator.png',
+            ratingValue: 4.7,
+            ratingCount: 190,
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateBreadcrumbStructuredData({
+            toolName: 'Hash Generator',
+            toolSlug: '/hash-generator',
+            categoryName: 'Security',
+            categorySlug: 'security',
+          }),
+        }}
+      />
+      {children}
+    </>
+  );
+}
+
+// ============================================================================
+// EXEMPLO 5: JSON to CSV Converter (Data Converter)
+// ============================================================================
+
+// File: src/app/json-to-csv/layout.tsx
+
+import type { Metadata } from "next";
+import { generateToolStructuredData, generateBreadcrumbStructuredData } from "@/utils/seo";
+
+export const metadata: Metadata = {
+  title: "JSON to CSV Converter - Convert JSON to CSV Online Free",
+  description: "Convert JSON data to CSV format instantly with our free online converter. Fast, secure, no registration needed.",
+  keywords: [
+    "json to csv",
+    "converter",
+    "json converter",
+    "csv converter",
+    "data converter",
+    "online tool",
+    "json"
+  ],
+  openGraph: {
+    title: "JSON to CSV Converter - Convert Online | Toolizio",
+    description: "Free JSON to CSV converter for instant data format conversion",
+    type: "website",
+    url: "https://toolizio.com/json-to-csv",
+    images: [
+      {
+        url: "/og-json-to-csv.png",
+        width: 1200,
+        height: 630,
+        alt: "JSON to CSV Converter - Toolizio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "JSON to CSV Converter - Convert Free",
+    description: "Convert JSON to CSV format instantly",
+    images: ["/twitter-json-to-csv.png"],
+  },
+  alternates: {
+    canonical: "https://toolizio.com/json-to-csv",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    'max-image-preview': 'large',
+    'max-snippet': -1,
+  },
+};
+
+export default function JSONToCSVLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateToolStructuredData({
+            name: 'JSON to CSV Converter',
+            description: 'Free tool to convert JSON data to CSV format instantly',
+            url: 'https://toolizio.com/json-to-csv',
+            category: 'UtilityApplication',
+            image: 'https://toolizio.com/og-json-to-csv.png',
+            ratingValue: 4.6,
+            ratingCount: 210,
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateBreadcrumbStructuredData({
+            toolName: 'JSON to CSV Converter',
+            toolSlug: '/json-to-csv',
+            categoryName: 'Converters',
+            categorySlug: 'converters',
+          }),
+        }}
+      />
+      {children}
+    </>
+  );
+}
+
+// ============================================================================
+// Template Genérico Reutilizável
+// ============================================================================
+
+/*
+import type { Metadata } from "next";
+import { generateToolStructuredData, generateBreadcrumbStructuredData } from "@/utils/seo";
+
+export const metadata: Metadata = {
+  title: "TOOL_NAME - DESCRIPTION | Toolizio",
+  description: "SHORT_DESCRIPTION_155_160_CHARS",
+  keywords: ["keyword1", "keyword2", "keyword3", "keyword4", "keyword5"],
+  openGraph: {
+    title: "TOOL_NAME - DESCRIPTION | Toolizio",
+    description: "SHORT_DESCRIPTION",
+    type: "website",
+    url: "https://toolizio.com/TOOL_SLUG",
+    images: [
+      {
+        url: "/og-TOOL_SLUG.png",
+        width: 1200,
+        height: 630,
+        alt: "TOOL_NAME - Toolizio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TOOL_NAME - DESCRIPTION",
+    description: "SHORT_DESCRIPTION",
+    images: ["/twitter-TOOL_SLUG.png"],
+  },
+  alternates: {
+    canonical: "https://toolizio.com/TOOL_SLUG",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    'max-image-preview': 'large',
+    'max-snippet': -1,
+  },
+};
+
+export default function ToolLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateToolStructuredData({
+            name: 'TOOL_NAME',
+            description: 'DETAILED_DESCRIPTION',
+            url: 'https://toolizio.com/TOOL_SLUG',
+            category: 'UtilityApplication',
+            image: 'https://toolizio.com/og-TOOL_SLUG.png',
+            ratingValue: 4.8,
+            ratingCount: 200,
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateBreadcrumbStructuredData({
+            toolName: 'TOOL_NAME',
+            toolSlug: '/TOOL_SLUG',
+            categoryName: 'CATEGORY_NAME',
+            categorySlug: 'CATEGORY_SLUG',
+          }),
+        }}
+      />
+      {children}
+    </>
+  );
+}
+*/
