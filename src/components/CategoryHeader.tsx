@@ -4,6 +4,7 @@ interface CategoryHeaderProps {
   category: {
     title: string;
     description: string;
+    longDescription?: string;
     icon: LucideIcon;
     color: string;
   };
@@ -51,6 +52,11 @@ export default function CategoryHeader({ category }: CategoryHeaderProps) {
         <p className="text-gray-600 dark:text-gray-400 mt-1">
           {category.description}
         </p>
+        {category.longDescription && (
+          <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm leading-relaxed">
+            {category.longDescription}
+          </p>
+        )}
       </div>
     </div>
   );

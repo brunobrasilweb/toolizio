@@ -1,6 +1,7 @@
 {
   "title": "Generators",
   "description": "Tools to generate data and codes",
+  "longDescription": "Generation tools automate the creation of essential data for development, marketing, and testing. From unique codes like UUIDs to valid documents like CPFs and CNPJs, our tools ensure accuracy and compliance, saving time and avoiding manual errors.",
   "icon": "Zap",
   "color": "blue",
   "tools": [

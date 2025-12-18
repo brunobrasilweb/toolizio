@@ -1,6 +1,7 @@
 {
   "title": "Security & Cryptography",
   "description": "Security and analysis tools",
+  "longDescription": "Security and cryptography tools protect sensitive data and information. Hash generators, Base64 encoders, and JWT decoders help developers implement secure authentication and protect digital communications.",
   "icon": "Shield",
   "color": "red",
   "tools": [

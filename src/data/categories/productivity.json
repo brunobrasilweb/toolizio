@@ -1,6 +1,7 @@
 {
   "title": "Productivity",
   "description": "Tools to boost your productivity",
+  "longDescription": "Productivity tools help optimize time and manage tasks efficiently. Pomodoro timers, word counters, backlink generators, and online raffles promote focus and organization in daily work.",
   "icon": "TrendingUp",
   "color": "orange",
   "tools": [

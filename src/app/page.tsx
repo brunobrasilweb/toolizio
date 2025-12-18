@@ -121,6 +121,46 @@ function HomePage() {
           </section>
         ))}
 
+        {/* Introductory Section */}
+        {!isSearching && (
+          <section className="text-center mb-16">
+            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
+              Welcome to Toolizio
+            </h1>
+            <div className="text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed space-y-4">
+              <p>
+                Toolizio is a comprehensive platform of free online tools designed to simplify daily and professional tasks. Offering more than 20 essential tools, Toolizio serves a wide range of users, from software developers to marketing professionals, financial managers, and individuals seeking greater productivity.
+              </p>
+              <p>
+                For Developers: Tools like CPF, CNPJ, secure password, QR code, and UUID generators help in creating test data and validation. Format converters such as JSON to CSV, XML to JSON, and hash and bcrypt tools facilitate application development and debugging.
+              </p>
+              <p>
+                For Marketing Professionals: QR code generators for campaigns, contact extraction tools, WhatsApp link creators, and YouTube thumbnail generators allow for creating engaging and trackable content. Image compression and resizing tools optimize media for web and social networks.
+              </p>
+              <p>
+                For Productivity-Focused Users: Salary calculators, word counters, Pomodoro timers, and document conversion tools (HTML to PDF, Markdown to PDF) help manage time and tasks efficiently. Barcode and favicon generators support promotional material creation.
+              </p>
+              <p>
+                For Financial Managers: Compound interest calculators, ad earnings simulators, and fuel consumption calculation tools enable precise analysis and financial planning.
+              </p>
+              <p>
+                Benefits of Toolizio's Online Tools:
+              </p>
+              <ul className="list-disc list-inside text-left max-w-2xl mx-auto space-y-2">
+                <li>Instant Access: All tools work directly in the browser, no downloads or installations required.</li>
+                <li>Security and Privacy: Local data processing, no personal information storage. Security tools like JWT decoders and hash generators ensure protection.</li>
+                <li>Completely Free: Zero costs, zero mandatory registrations.</li>
+                <li>Mobile Compatibility: Responsive interface that works perfectly on mobile devices, tablets, and desktops.</li>
+                <li>Speed and Efficiency: Optimized algorithms for fast results, saving valuable time.</li>
+                <li>Constant Updates: New tools added regularly to meet emerging needs.</li>
+              </ul>
+              <p>
+                Toolizio is committed to excellence, offering reliable and easy-to-use tools. Whether for generating test data, converting formats, creating visual codes, or calculating financial metrics, Toolizio is your digital partner for productivity and innovation.
+              </p>
+            </div>
+          </section>
+        )}
+
         {/* Show additional sections only when not searching */}
         {!isSearching && (
           <>

@@ -1,6 +1,7 @@
 {
   "title": "Financial",
   "description": "Financial and payment tools",
+  "longDescription": "Financial tools facilitate transactions and monetary calculations. Generate QR Codes for PIX payments, calculate compound interest, and simulate ad earnings for better financial planning.",
   "icon": "QrCode",
   "color": "cyan",
   "tools": [

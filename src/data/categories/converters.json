@@ -1,6 +1,7 @@
 {
   "title": "Converters",
   "description": "Convert between different formats",
+  "longDescription": "Conversion tools facilitate the transformation of data between various formats. Convert JSON to CSV, XML to JSON, images to PDF, and more, ensuring compatibility and efficiency in data processing.",
   "icon": "RefreshCw",
   "color": "green",
   "tools": [
