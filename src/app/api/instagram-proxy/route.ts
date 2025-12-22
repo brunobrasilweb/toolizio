@@ -1,6 +1,10 @@
 import { NextResponse, NextRequest } from 'next/server';
+import { checkIP } from '../../../utils/ipCheck';
 
 export async function GET(req: NextRequest) {
+  if (!checkIP(req)) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 403 });
+  }
   try {
   const url = req.nextUrl.searchParams.get('url');
     if (!url) return NextResponse.json({ error: 'Missing url' }, { status: 400 });
@@ -26,6 +30,9 @@ export async function GET(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
+  if (!checkIP(req)) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 403 });
+  }
   try {
     const body = await req.json();
     const { url } = body || {};

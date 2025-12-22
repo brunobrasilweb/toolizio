@@ -1,4 +1,5 @@
-import { NextResponse } from 'next/server';
+import { NextResponse, NextRequest } from 'next/server';
+import { checkIP } from '../../../utils/ipCheck';
 import { chromium } from 'playwright';
 
 function isInstagramUrl(value: string) {
@@ -71,7 +72,10 @@ function tryExtractFromHtml(text: string): string | null {
   return null;
 }
 
-export async function POST(req: Request) {
+export async function POST(req: NextRequest) {
+  if (!checkIP(req)) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 403 });
+  }
   try {
     const body = await req.json();
     const { url } = body || {};

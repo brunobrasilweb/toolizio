@@ -1,7 +1,11 @@
-import { NextResponse } from 'next/server'
+import { NextResponse, NextRequest } from 'next/server'
+import { checkIP } from '../../../utils/ipCheck';
 import playwright from 'playwright'
 
-export async function GET(req: Request) {
+export async function GET(req: NextRequest) {
+  if (!checkIP(req)) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 403 });
+  }
   try {
     const { searchParams } = new URL(req.url)
     const url = searchParams.get('url')

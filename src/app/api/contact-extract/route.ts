@@ -1,4 +1,5 @@
-import { NextResponse } from 'next/server';
+import { NextResponse, NextRequest } from 'next/server';
+import { checkIP } from '../../../utils/ipCheck';
 
 function normalizeUrl(input: string, base?: string) {
   try {
@@ -53,7 +54,10 @@ function extractPhones(html: string, country: string) {
   return Array.from(set);
 }
 
-export async function POST(req: Request) {
+export async function POST(req: NextRequest) {
+  if (!checkIP(req)) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 403 });
+  }
   try {
     const body = await req.json();
     const { url, country = 'any' } = body || {};
