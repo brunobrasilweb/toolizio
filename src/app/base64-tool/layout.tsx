@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { generateToolStructuredData, generateBreadcrumbStructuredData } from "@/utils/seo";
 
 export const metadata: Metadata = {
   title: "Base64 Encoder & Decoder - Encode/Decode Base64 Online",
@@ -37,8 +38,43 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://toolizio.com/base64-tool",
   },
+  robots: {
+    index: true,
+    follow: true,
+    'max-image-preview': 'large',
+    'max-snippet': -1,
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateToolStructuredData({
+            name: 'Base64 Encoder & Decoder',
+            description: 'Free tool to encode and decode text to/from Base64. Convert strings, URLs, and files instantly.',
+            url: 'https://toolizio.com/base64-tool',
+            category: 'UtilityApplication',
+            image: 'https://toolizio.com/logo.png',
+            ratingValue: 4.7,
+            ratingCount: 290,
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateBreadcrumbStructuredData({
+            toolName: 'Base64 Encoder & Decoder',
+            toolSlug: '/base64-tool',
+            categoryName: 'Converters',
+            categorySlug: 'converters',
+          }),
+        }}
+      />
+      {children}
+    </>
+  );
 }

@@ -12,12 +12,12 @@ export async function generateMetadata({ params }: any) {
 
   if (!category) {
     return {
-      title: 'Categoria não encontrada - Toolizio',
+      title: 'Category not found - Toolizio',
     };
   }
 
   const title = `${category.title} - Toolizio`;
-  const description = category.description || 'Ferramentas gratuitas e rápidas para desenvolvedores e usuários.';
+  const description = category.description || 'Fast and free online tools for developers and users.';
 
   return {
     title,
@@ -25,11 +25,11 @@ export async function generateMetadata({ params }: any) {
     openGraph: {
       title,
       description,
-      url: `https://www.toolizio.com/category/${slug}`,
+      url: `https://toolizio.com/category/${slug}`,
       siteName: 'Toolizio',
     },
     alternates: {
-      canonical: `https://www.toolizio.com/category/${slug}`,
+      canonical: `https://toolizio.com/category/${slug}`,
     }
   };
 }
@@ -45,7 +45,7 @@ export default function CategoryPage(props: any) {
         <Header showBackButton />
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <h2 className="text-2xl font-semibold">Category not found</h2>
-          <p className="mt-4">A categoria solicitada não existe.</p>
+          <p className="mt-4">The requested category does not exist.</p>
         </main>
         <Footer />
       </div>
@@ -63,7 +63,7 @@ export default function CategoryPage(props: any) {
             "@type": "CollectionPage",
             "name": category.title,
             "description": category.description,
-            "url": `https://www.toolizio.com/category/${slug}`
+            "url": `https://toolizio.com/category/${slug}`
           })
         }}
       />

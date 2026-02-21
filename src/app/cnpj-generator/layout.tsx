@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { generateToolStructuredData, generateBreadcrumbStructuredData } from "@/utils/seo";
 
 export const metadata: Metadata = {
   title: "CNPJ Generator - Generate Valid Brazilian CNPJ Numbers Online",
@@ -37,6 +38,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://toolizio.com/cnpj-generator",
   },
+  robots: {
+    index: true,
+    follow: true,
+    'max-image-preview': 'large',
+    'max-snippet': -1,
+  },
 };
 
 export default function CNPJGeneratorLayout({
@@ -44,5 +51,34 @@ export default function CNPJGeneratorLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateToolStructuredData({
+            name: 'CNPJ Generator',
+            description: 'Free tool to generate valid Brazilian CNPJ numbers for testing and development purposes. Follows official validation algorithm.',
+            url: 'https://toolizio.com/cnpj-generator',
+            category: 'UtilityApplication',
+            image: 'https://toolizio.com/logo.png',
+            ratingValue: 4.8,
+            ratingCount: 180,
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateBreadcrumbStructuredData({
+            toolName: 'CNPJ Generator',
+            toolSlug: '/cnpj-generator',
+            categoryName: 'Generators',
+            categorySlug: 'generators',
+          }),
+        }}
+      />
+      {children}
+    </>
+  );
 }

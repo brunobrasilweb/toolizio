@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { generateToolStructuredData, generateBreadcrumbStructuredData } from '@/utils/seo'
 
 export const metadata: Metadata = {
   title: 'Background Removal - Remove Image Backgrounds Online',
@@ -33,8 +34,45 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://toolizio.com/background-removal',
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 }
 
 export default function BackgroundRemovalLayout({ children }: { children: React.ReactNode }) {
-  return children
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateToolStructuredData({
+            name: 'Background Removal',
+            description: 'Remove image backgrounds in your browser. Export transparent PNG or replace background with a solid color. Private and fast — runs locally using TensorFlow.js BodyPix.',
+            url: 'https://toolizio.com/background-removal',
+            category: 'WebApplication',
+          })),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbStructuredData({
+            toolName: 'Background Removal',
+            toolSlug: '/background-removal',
+            categoryName: 'Image Tools',
+            categorySlug: 'image-tools',
+          })),
+        }}
+      />
+      {children}
+    </>
+  )
 }

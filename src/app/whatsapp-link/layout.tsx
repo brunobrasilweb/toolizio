@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { generateToolStructuredData, generateBreadcrumbStructuredData } from '@/utils/seo'
 
 export const metadata: Metadata = {
   title: "WhatsApp Link Generator - Create WhatsApp Chat Links Online",
@@ -38,6 +39,17 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://toolizio.com/whatsapp-link",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function WhatsAppLinkLayout({
@@ -45,5 +57,31 @@ export default function WhatsAppLinkLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateToolStructuredData({
+            name: 'WhatsApp Link Generator',
+            description: 'Generate WhatsApp chat links with pre-filled messages. Share direct chat links with your customers or friends. No registration required, 100% free tool.',
+            url: 'https://toolizio.com/whatsapp-link',
+            category: 'WebApplication',
+          })),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbStructuredData({
+            toolName: 'WhatsApp Link Generator',
+            toolSlug: '/whatsapp-link',
+            categoryName: 'Communication Tools',
+            categorySlug: 'communication-tools',
+          })),
+        }}
+      />
+      {children}
+    </>
+  );
 }

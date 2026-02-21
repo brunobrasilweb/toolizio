@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { generateToolStructuredData, generateBreadcrumbStructuredData } from '@/utils/seo'
 
 export const metadata: Metadata = {
   title: 'Compound Interest Calculator - Calculate Future Value & Interest',
@@ -33,8 +34,45 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://toolizio.com/compound-interest',
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 }
 
 export default function CompoundInterestLayout({ children }: { children: React.ReactNode }) {
-  return children
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateToolStructuredData({
+            name: 'Compound Interest Calculator',
+            description: 'Compound interest calculator with support for periodic contributions, selectable compounding frequency, and detailed results. Calculate final amount, total contributions and interest earned.',
+            url: 'https://toolizio.com/compound-interest',
+            category: 'WebApplication',
+          })),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbStructuredData({
+            toolName: 'Compound Interest Calculator',
+            toolSlug: '/compound-interest',
+            categoryName: 'Calculators',
+            categorySlug: 'calculators',
+          })),
+        }}
+      />
+      {children}
+    </>
+  )
 }

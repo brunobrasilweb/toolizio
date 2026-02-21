@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { generateToolStructuredData, generateBreadcrumbStructuredData } from '@/utils/seo'
 
 export const metadata: Metadata = {
   title: 'Sorteio - Faça um sorteio online de nomes | Toolizio',
@@ -34,8 +35,45 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://toolizio.com/sorteio',
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 }
 
 export default function SorteioLayout({ children }: { children: React.ReactNode }) {
-  return children
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateToolStructuredData({
+            name: 'Sorteio Online',
+            description: 'Ferramenta gratuita para realizar sorteios online: cole uma lista de nomes e sorteie um vencedor com animação atraente. Resultado em destaque e opção de copiar.',
+            url: 'https://toolizio.com/sorteio',
+            category: 'WebApplication',
+          })),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbStructuredData({
+            toolName: 'Sorteio Online',
+            toolSlug: '/sorteio',
+            categoryName: 'Fun Tools',
+            categorySlug: 'fun-tools',
+          })),
+        }}
+      />
+      {children}
+    </>
+  )
 }

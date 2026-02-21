@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { generateToolStructuredData, generateBreadcrumbStructuredData } from "@/utils/seo";
 
 export const metadata: Metadata = {
   title: "Hash Generator - MD5, SHA1, SHA256, SHA512 Online",
@@ -37,6 +38,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://toolizio.com/hash-generator",
   },
+  robots: {
+    index: true,
+    follow: true,
+    'max-image-preview': 'large',
+    'max-snippet': -1,
+  },
 };
 
 export default function HashGeneratorLayout({
@@ -44,5 +51,34 @@ export default function HashGeneratorLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateToolStructuredData({
+            name: 'Hash Generator',
+            description: 'Free tool to generate MD5, SHA1, SHA256, SHA512 and other cryptographic hashes for data integrity verification.',
+            url: 'https://toolizio.com/hash-generator',
+            category: 'SecurityApplication',
+            image: 'https://toolizio.com/logo.png',
+            ratingValue: 4.9,
+            ratingCount: 350,
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateBreadcrumbStructuredData({
+            toolName: 'Hash Generator',
+            toolSlug: '/hash-generator',
+            categoryName: 'Security',
+            categorySlug: 'security',
+          }),
+        }}
+      />
+      {children}
+    </>
+  );
 }

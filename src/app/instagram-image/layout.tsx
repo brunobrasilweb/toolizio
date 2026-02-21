@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { generateToolStructuredData, generateBreadcrumbStructuredData } from '@/utils/seo'
 
 export const metadata: Metadata = {
   title: "Instagram Image Downloader - Download Instagram Photos Online",
@@ -37,8 +38,45 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://toolizio.com/instagram-image",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateToolStructuredData({
+            name: 'Instagram Image Downloader',
+            description: 'Download Instagram images and photos easily with our free online tool. Save Instagram pictures in high quality without watermarks. Fast and secure Instagram photo downloader.',
+            url: 'https://toolizio.com/instagram-image',
+            category: 'WebApplication',
+          })),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbStructuredData({
+            toolName: 'Instagram Image Downloader',
+            toolSlug: '/instagram-image',
+            categoryName: 'Social Media Tools',
+            categorySlug: 'social-media-tools',
+          })),
+        }}
+      />
+      {children}
+    </>
+  );
 }

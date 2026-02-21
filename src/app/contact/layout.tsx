@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { generateBreadcrumbStructuredData } from '@/utils/seo'
 
 export const metadata: Metadata = {
   title: "Contact Us - Get in Touch with Toolizio Team",
@@ -37,6 +38,17 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://toolizio.com/contact",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function ContactLayout({
@@ -46,6 +58,36 @@ export default function ContactLayout({
 }) {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ContactPage',
+            name: 'Contact Toolizio',
+            description: 'Get in touch with the Toolizio team. Send us your questions, feedback, suggestions, or feature requests.',
+            url: 'https://toolizio.com/contact',
+            mainEntity: {
+              '@type': 'Organization',
+              name: 'Toolizio',
+              contactPoint: {
+                '@type': 'ContactPoint',
+                contactType: 'customer service',
+                availableLanguage: 'English',
+              },
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbStructuredData({
+            toolName: 'Contact',
+            toolSlug: '/contact',
+          })),
+        }}
+      />
       {children}
     </>
   );

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { generateToolStructuredData, generateBreadcrumbStructuredData } from '@/utils/seo'
 
 export const metadata: Metadata = {
   title: 'Image Resizer - Resize images online | Toolizio',
@@ -33,8 +34,45 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://toolizio.com/image-resizer',
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 }
 
 export default function ImageResizerLayout({ children }: { children: React.ReactNode }) {
-  return children
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateToolStructuredData({
+            name: 'Image Resizer',
+            description: 'Resize JPG and PNG images directly in your browser. Change dimensions, keep aspect ratio and download the resized image. No uploads.',
+            url: 'https://toolizio.com/image-resizer',
+            category: 'WebApplication',
+          })),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbStructuredData({
+            toolName: 'Image Resizer',
+            toolSlug: '/image-resizer',
+            categoryName: 'Image Tools',
+            categorySlug: 'image-tools',
+          })),
+        }}
+      />
+      {children}
+    </>
+  )
 }

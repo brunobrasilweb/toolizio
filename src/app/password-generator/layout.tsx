@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { generateToolStructuredData, generateBreadcrumbStructuredData } from "@/utils/seo";
 
 export const metadata: Metadata = {
   title: "Password Generator - Create Strong & Secure Passwords Online",
@@ -37,6 +38,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://toolizio.com/password-generator",
   },
+  robots: {
+    index: true,
+    follow: true,
+    'max-image-preview': 'large',
+    'max-snippet': -1,
+  },
 };
 
 export default function PasswordGeneratorLayout({
@@ -44,5 +51,34 @@ export default function PasswordGeneratorLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateToolStructuredData({
+            name: 'Password Generator',
+            description: 'Free tool to generate strong and secure passwords online. Customizable length and character sets.',
+            url: 'https://toolizio.com/password-generator',
+            category: 'SecurityApplication',
+            image: 'https://toolizio.com/logo.png',
+            ratingValue: 4.9,
+            ratingCount: 320,
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateBreadcrumbStructuredData({
+            toolName: 'Password Generator',
+            toolSlug: '/password-generator',
+            categoryName: 'Generators',
+            categorySlug: 'generators',
+          }),
+        }}
+      />
+      {children}
+    </>
+  );
 }

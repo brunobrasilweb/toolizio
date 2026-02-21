@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { generateToolStructuredData, generateBreadcrumbStructuredData } from '@/utils/seo'
 
 export const metadata: Metadata = {
   title: 'JPG to PDF Converter - Convert JPG Images to PDF Documents Online',
@@ -37,6 +38,17 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://toolizio.com/jpg-to-pdf',
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 }
 
 export default function JpgToPdfLayout({
@@ -44,5 +56,31 @@ export default function JpgToPdfLayout({
 }: {
   children: React.ReactNode
 }) {
-  return children
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateToolStructuredData({
+            name: 'JPG to PDF Converter',
+            description: 'Convert JPG, JPEG, and PNG images to PDF documents with high quality. Free online JPG to PDF converter tool with batch processing and multiple image support.',
+            url: 'https://toolizio.com/jpg-to-pdf',
+            category: 'WebApplication',
+          })),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbStructuredData({
+            toolName: 'JPG to PDF Converter',
+            toolSlug: '/jpg-to-pdf',
+            categoryName: 'Converters',
+            categorySlug: 'converters',
+          })),
+        }}
+      />
+      {children}
+    </>
+  )
 } 

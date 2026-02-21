@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { generateToolStructuredData, generateBreadcrumbStructuredData } from "@/utils/seo";
 
 export const metadata: Metadata = {
   title: "Credit Card Generator - Generate Test Card Numbers (Luhn) | Toolizio",
@@ -11,7 +12,9 @@ export const metadata: Metadata = {
     "test credit card",
     "visa generator",
     "mastercard generator",
-    "amex generator"
+    "amex generator",
+    "payment testing",
+    "card validation"
   ],
   openGraph: {
     title: "Credit Card Generator - Toolizio",
@@ -35,8 +38,43 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://toolizio.com/credit-card-generator",
   },
+  robots: {
+    index: true,
+    follow: true,
+    'max-image-preview': 'large',
+    'max-snippet': -1,
+  },
 };
 
 export default function CreditCardLayout({ children }: { children: React.ReactNode }) {
-  return children;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateToolStructuredData({
+            name: 'Credit Card Generator',
+            description: 'Free tool to generate valid credit card numbers for testing using the Luhn algorithm. Supports Visa, MasterCard, Amex and more.',
+            url: 'https://toolizio.com/credit-card-generator',
+            category: 'UtilityApplication',
+            image: 'https://toolizio.com/logo.png',
+            ratingValue: 4.7,
+            ratingCount: 130,
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateBreadcrumbStructuredData({
+            toolName: 'Credit Card Generator',
+            toolSlug: '/credit-card-generator',
+            categoryName: 'Generators',
+            categorySlug: 'generators',
+          }),
+        }}
+      />
+      {children}
+    </>
+  );
 }

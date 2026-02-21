@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { generateToolStructuredData, generateBreadcrumbStructuredData } from '@/utils/seo'
 
 export const metadata: Metadata = {
   title: "YouTube Thumbnail Downloader - Download YouTube Thumbnails Online",
@@ -37,8 +38,45 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://toolizio.com/youtube-thumbnail",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateToolStructuredData({
+            name: 'YouTube Thumbnail Downloader',
+            description: 'Download YouTube video thumbnails in high quality with our free online tool. Get YouTube thumbnail images in various resolutions including HD, Full HD, and 4K quality.',
+            url: 'https://toolizio.com/youtube-thumbnail',
+            category: 'WebApplication',
+          })),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbStructuredData({
+            toolName: 'YouTube Thumbnail Downloader',
+            toolSlug: '/youtube-thumbnail',
+            categoryName: 'Video Tools',
+            categorySlug: 'video-tools',
+          })),
+        }}
+      />
+      {children}
+    </>
+  );
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { generateToolStructuredData, generateBreadcrumbStructuredData } from '@/utils/seo'
 
 export const metadata: Metadata = {
   title: "Pomodoro Timer - Boost Productivity with Time Management",
@@ -37,8 +38,45 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://toolizio.com/pomodoro-timer",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateToolStructuredData({
+            name: 'Pomodoro Timer',
+            description: 'Track your tasks and boost productivity with our customizable Pomodoro timer. Create, save, and analyze your progress with beautiful charts. Free online productivity tool for better focus.',
+            url: 'https://toolizio.com/pomodoro-timer',
+            category: 'WebApplication',
+          })),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbStructuredData({
+            toolName: 'Pomodoro Timer',
+            toolSlug: '/pomodoro-timer',
+            categoryName: 'Productivity Tools',
+            categorySlug: 'productivity-tools',
+          })),
+        }}
+      />
+      {children}
+    </>
+  );
 }

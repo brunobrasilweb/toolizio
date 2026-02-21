@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { generateBreadcrumbStructuredData } from '@/utils/seo'
 
 export const metadata: Metadata = {
   title: "Privacy Policy - How We Protect Your Data | Toolizio",
@@ -37,6 +38,17 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://toolizio.com/privacy-policy",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function PrivacyPolicyLayout({
@@ -46,6 +58,32 @@ export default function PrivacyPolicyLayout({
 }) {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: 'Privacy Policy - Toolizio',
+            description: 'Read our comprehensive privacy policy to understand how Toolizio handles your data, protects your privacy, and ensures security.',
+            url: 'https://toolizio.com/privacy-policy',
+            mainEntity: {
+              '@type': 'PrivacyPolicy',
+              name: 'Toolizio Privacy Policy',
+              text: 'This privacy policy explains how Toolizio collects, uses, and protects your personal information when you use our free online tools.',
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbStructuredData({
+            toolName: 'Privacy Policy',
+            toolSlug: '/privacy-policy',
+          })),
+        }}
+      />
       {children}
     </>
   );

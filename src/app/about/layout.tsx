@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { generateBreadcrumbStructuredData } from '@/utils/seo'
 
 export const metadata: Metadata = {
   title: "About Toolizio - Free Online Tools for Everyone",
@@ -37,6 +38,17 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://toolizio.com/about",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function AboutLayout({
@@ -46,6 +58,36 @@ export default function AboutLayout({
 }) {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'Toolizio',
+            description: 'Free online tools platform providing secure and useful utilities for developers, designers, and professionals.',
+            url: 'https://toolizio.com',
+            logo: {
+              '@type': 'ImageObject',
+              url: 'https://toolizio.com/logo.png',
+              width: '1200',
+              height: '630',
+            },
+            sameAs: [
+              'https://toolizio.com',
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbStructuredData({
+            toolName: 'About',
+            toolSlug: '/about',
+          })),
+        }}
+      />
       {children}
     </>
   );

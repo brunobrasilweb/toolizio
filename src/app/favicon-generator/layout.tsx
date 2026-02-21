@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { generateToolStructuredData, generateBreadcrumbStructuredData } from "@/utils/seo";
 
 export const metadata: Metadata = {
   title: "Favicon Generator - Create Favicons for Your Website Online",
@@ -37,6 +38,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://toolizio.com/favicon-generator",
   },
+  robots: {
+    index: true,
+    follow: true,
+    'max-image-preview': 'large',
+    'max-snippet': -1,
+  },
 };
 
 export default function FaviconGeneratorLayout({
@@ -44,5 +51,34 @@ export default function FaviconGeneratorLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateToolStructuredData({
+            name: 'Favicon Generator',
+            description: 'Free tool to generate high-quality favicons from JPG or PNG images. Create ICO and PNG favicons for web, mobile, and desktop.',
+            url: 'https://toolizio.com/favicon-generator',
+            category: 'UtilityApplication',
+            image: 'https://toolizio.com/logo.png',
+            ratingValue: 4.8,
+            ratingCount: 200,
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateBreadcrumbStructuredData({
+            toolName: 'Favicon Generator',
+            toolSlug: '/favicon-generator',
+            categoryName: 'Generators',
+            categorySlug: 'generators',
+          }),
+        }}
+      />
+      {children}
+    </>
+  );
 }

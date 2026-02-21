@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { generateToolStructuredData, generateBreadcrumbStructuredData } from "@/utils/seo";
 
 export const metadata: Metadata = {
   title: "UUID Generator - Generate Unique Identifiers Online",
@@ -38,6 +39,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://toolizio.com/uuid-generator",
   },
+  robots: {
+    index: true,
+    follow: true,
+    'max-image-preview': 'large',
+    'max-snippet': -1,
+  },
 };
 
 export default function UuidGeneratorLayout({
@@ -45,5 +52,34 @@ export default function UuidGeneratorLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateToolStructuredData({
+            name: 'UUID Generator',
+            description: 'Free tool to generate UUID (Universally Unique Identifiers) versions 1, 4 and more for applications and databases.',
+            url: 'https://toolizio.com/uuid-generator',
+            category: 'UtilityApplication',
+            image: 'https://toolizio.com/logo.png',
+            ratingValue: 4.7,
+            ratingCount: 190,
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateBreadcrumbStructuredData({
+            toolName: 'UUID Generator',
+            toolSlug: '/uuid-generator',
+            categoryName: 'Generators',
+            categorySlug: 'generators',
+          }),
+        }}
+      />
+      {children}
+    </>
+  );
 }

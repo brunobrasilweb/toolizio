@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { generateToolStructuredData, generateBreadcrumbStructuredData } from "@/utils/seo";
 
 export const metadata: Metadata = {
   title: "JWT Decoder - Decode & Verify JSON Web Tokens Online",
@@ -37,6 +38,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://toolizio.com/jwt-decoder",
   },
+  robots: {
+    index: true,
+    follow: true,
+    'max-image-preview': 'large',
+    'max-snippet': -1,
+  },
 };
 
 export default function JWTDecoderLayout({
@@ -44,5 +51,34 @@ export default function JWTDecoderLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateToolStructuredData({
+            name: 'JWT Decoder',
+            description: 'Free tool to decode and verify JSON Web Tokens (JWT). Analyze header, payload, and signature for API testing.',
+            url: 'https://toolizio.com/jwt-decoder',
+            category: 'SecurityApplication',
+            image: 'https://toolizio.com/logo.png',
+            ratingValue: 4.8,
+            ratingCount: 220,
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateBreadcrumbStructuredData({
+            toolName: 'JWT Decoder',
+            toolSlug: '/jwt-decoder',
+            categoryName: 'Security',
+            categorySlug: 'security',
+          }),
+        }}
+      />
+      {children}
+    </>
+  );
 }

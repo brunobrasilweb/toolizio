@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { generateToolStructuredData, generateBreadcrumbStructuredData } from "@/utils/seo";
 
 export const metadata: Metadata = {
   title: 'HTML to PDF Converter - Convert HTML Files to PDF Online',
@@ -37,6 +38,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://toolizio.com/html-to-pdf',
   },
+  robots: {
+    index: true,
+    follow: true,
+    'max-image-preview': 'large',
+    'max-snippet': -1,
+  },
 }
 
 export default function HtmlToPdfLayout({
@@ -44,5 +51,34 @@ export default function HtmlToPdfLayout({
 }: {
   children: React.ReactNode
 }) {
-  return children
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateToolStructuredData({
+            name: 'HTML to PDF Converter',
+            description: 'Free tool to convert HTML files to PDF format with custom styling and formatting. High-quality output for web developers.',
+            url: 'https://toolizio.com/html-to-pdf',
+            category: 'UtilityApplication',
+            image: 'https://toolizio.com/logo.png',
+            ratingValue: 4.6,
+            ratingCount: 170,
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateBreadcrumbStructuredData({
+            toolName: 'HTML to PDF Converter',
+            toolSlug: '/html-to-pdf',
+            categoryName: 'Converters',
+            categorySlug: 'converters',
+          }),
+        }}
+      />
+      {children}
+    </>
+  );
 }

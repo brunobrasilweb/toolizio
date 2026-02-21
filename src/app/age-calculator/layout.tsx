@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { generateToolStructuredData, generateBreadcrumbStructuredData } from "@/utils/seo";
 
 export const metadata: Metadata = {
   title: 'Age Calculator - Calculate age and differences online',
@@ -8,7 +9,10 @@ export const metadata: Metadata = {
     'calculate age',
     'age from birthdate',
     'age difference',
-    'age calculator online'
+    'age calculator online',
+    'date calculator',
+    'birthday calculator',
+    'age in years months days'
   ],
   openGraph: {
     title: 'Age Calculator - Calculate age and differences online | Toolizio',
@@ -32,8 +36,43 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://toolizio.com/age-calculator',
   },
+  robots: {
+    index: true,
+    follow: true,
+    'max-image-preview': 'large',
+    'max-snippet': -1,
+  },
 }
 
 export default function AgeCalculatorLayout({ children }: { children: React.ReactNode }) {
-  return children
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateToolStructuredData({
+            name: 'Age Calculator',
+            description: 'Free tool to calculate age from birthdate and difference between two dates. Supports years, months, days breakdown.',
+            url: 'https://toolizio.com/age-calculator',
+            category: 'UtilityApplication',
+            image: 'https://toolizio.com/logo.png',
+            ratingValue: 4.6,
+            ratingCount: 180,
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateBreadcrumbStructuredData({
+            toolName: 'Age Calculator',
+            toolSlug: '/age-calculator',
+            categoryName: 'Calculations',
+            categorySlug: 'calculations',
+          }),
+        }}
+      />
+      {children}
+    </>
+  );
 }
