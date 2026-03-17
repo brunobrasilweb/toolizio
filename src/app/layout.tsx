@@ -135,44 +135,7 @@ export default function RootLayout({
             `,
           }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              "name": "Toolizio",
-              "description": "Free online tools and utilities for developers, designers, and professionals",
-              "url": "https://toolizio.com",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://toolizio.com/?q={search_term_string}",
-                "query-input": "required name=search_term_string"
-              },
-              "publisher": {
-                "@type": "Organization",
-                "name": "Toolizio",
-                "url": "https://toolizio.com",
-                "logo": {
-                  "@type": "ImageObject",
-                  "url": "https://toolizio.com/logo.png"
-                }
-              },
-              "mainEntity": {
-                "@type": "SoftwareApplication",
-                "name": "Toolizio",
-                "applicationCategory": "WebApplication",
-                "offers": {
-                  "@type": "Offer",
-                  "price": "0",
-                  "priceCurrency": "USD"
-                },
-                "operatingSystem": "Any",
-                "permissions": "https://toolizio.com/privacy-policy"
-              }
-            })
-          }}
-        />
+        {/* Theme preservation script */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
